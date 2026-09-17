@@ -1,8 +1,18 @@
+nav{
+    background-color: black;
+    height: 50px;
+    margin: 0;
+
+}
 .navbar{
     display: flex;
     list-style-type: none;
     gap: 5px;
-
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    
 }
 .nav-item a{
     text-decoration: none;
@@ -12,4 +22,6 @@
     border-radius: 5px;
     border: 1px solid gray;
     padding: 5px;
+    display: inline-block;
+    
 }
