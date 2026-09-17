@@ -25,3 +25,27 @@ nav{
     display: inline-block;
     
 }
+
+#upcoming{
+    background-color: lightgray;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.event-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+#event1{
+    grid-column: span 2;
+}
