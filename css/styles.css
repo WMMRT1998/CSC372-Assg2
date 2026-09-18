@@ -1,3 +1,14 @@
+/*
+  Name: Russell Webster
+  Date: 09.18.2026
+  CSC 372-01
+
+  This is the styles.css file for the Campus Event Guide website.
+  This stylesheet controls the appearance of both HTML pages,
+  including navigation, event cards, images, and footers.
+  It uses Grid, Flexbox, and media queries to organize content
+  and adjust the layouts for different screen widths.
+*/
 header{
     position: sticky;
     top: 0;
