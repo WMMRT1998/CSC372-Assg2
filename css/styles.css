@@ -89,3 +89,6 @@ h2{
     text-align: left;
     text-indent: 10%;
 }
+html{
+    scroll-behavior: smooth;
+}
