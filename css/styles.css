@@ -160,6 +160,8 @@ h3 {
 
 #compact-events{
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     background-color: lightgrey;
     justify-content: space-around;
     padding: 1%;
