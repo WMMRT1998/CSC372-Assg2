@@ -173,6 +173,21 @@ h3 {
     padding: 20px;
     text-align: center;
 }
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+    padding: 1%;
+     justify-content: center;
+}
+.footer-item{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+   
+}
 @media (max-width: 600px) {
 
     
