@@ -225,4 +225,10 @@ footer{
     #main-card{
         grid-column: auto;
     }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }
