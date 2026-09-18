@@ -126,6 +126,51 @@ h3 {
     grid-column: span 2;
 }
 
+.event-layout {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.event-layout-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+#main-card{
+    grid-column: span 2;
+}
+#bigwedding{
+    height: 800px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.event-details{
+    text-align: center;
+    font-size: 20px;
+}
+
+#Schedule{
+    list-style-type: none;
+}
+
+#compact-events{
+    display: flex;
+    background-color: lightgrey;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.related-card{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
 @media (max-width: 600px) {
 
     
@@ -135,6 +180,13 @@ h3 {
 /*I could not figure out why it wouldn't work for a while. I had to reset these two :D*/
     #event1,
     #wedding-event {
+        grid-column: auto;
+    }
+/*funnily enough, this exact setup solves the making sidebar going under main column problem*/
+    .event-layout{
+        grid-template-columns: 1fr;
+    }
+    #main-card{
         grid-column: auto;
     }
 }
