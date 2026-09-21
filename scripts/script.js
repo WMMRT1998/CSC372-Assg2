@@ -62,8 +62,13 @@ for (const card of cards) {
     let eventLocation = eventDetails[1].innerText;
 
     const eventItem = document.createElement('li');
-    eventItem.innerHTML = "<strong>Name: </strong>" + eventName + "<br>" + 
-    "<strong>Date/Time: </strong>" + eventDate + "<br>" + "<strong>Location: </strong>" + eventLocation;
+    eventItem.style.whiteSpace = 'pre-line';
+    eventItem.textContent = "Name: " + eventName + "\n" + eventDate.replace('<br>', '') + "\n" + eventLocation; 
+    /*I originally used innerHTML to make this pretty, but then saw we weren't allowed to. 
+    when i replaced with textcontent, it was printing the line break from the html source.
+    I could have removed the line break and made them seperate <p>, but i felt that went
+    against spirit of assg. So i just replaced '<br>' with '' and maintained the exact source html
+    I started with */
 
     const button = document.createElement('button');
     button.style.width = '100px';
