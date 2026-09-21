@@ -19,17 +19,22 @@ function addBorders(event) {
 
 const cards = document.querySelectorAll('.event-card');
 for (const card of cards){
-    card.addEventListener('click', onClick)
+
+    const button = document.createElement('button');
+    button.style.width = '100px';
+    button.style.height = '30px';
+    card.appendChild(button);
+    button.addEventListener('click', onClick)
     var flag = 0;
     function onClick(event){
         if(flag === 0){
-        const img = event.currentTarget;
+        const img = event.target.parentElement;
         img.style.border = "5px solid black" ;
         flag = 1
     }
 
     else{
-        const img = event.currentTarget;
+        const img = event.target.parentElement;
         img.style.border = "none" ;
         flag = 0
     }
