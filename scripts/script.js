@@ -23,10 +23,14 @@ function addBorders(event) {
 const summary = document.createElement('section');
 const list1 = document.createElement('ul');
 const noSaved = document.createElement('p');
+const summaryHeader = document.createElement('h2');
+
+summaryHeader.textContent = 'Summary of Saved Events'
 noSaved.textContent = 'There is no events saved'
 
 const page = document.querySelector('body');
-page.appendChild(summary);
+page.insertBefore(summary, page.querySelector('footer'));
+summary.appendChild(summaryHeader);
 summary.appendChild(noSaved);
 summary.appendChild(list1);
 let summaryCounter = 0; //this is a flag that i will use to check how many events are saved
