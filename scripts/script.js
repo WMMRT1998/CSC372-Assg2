@@ -24,7 +24,7 @@ const page = document.querySelector('body');
 page.appendChild(summary);
 summary.appendChild(noSaved);
 summary.appendChild(list1);
-
+let summaryCounter = 0; //this is a flag that i will use to check how many events are saved
 
 
 const cards = document.querySelectorAll('.event-card');
@@ -44,6 +44,10 @@ for (const card of cards){
         img.style.border = "5px solid black" ;
         button.textContent = 'Remove This';
         flag = 1
+        summaryCounter++;
+
+        summary.removeChild(noSaved);
+
     }
 
     else{
@@ -51,6 +55,11 @@ for (const card of cards){
         img.style.border = "none" ;
         flag = 0
         button.textContent = 'Save This';
+        summaryCounter--;
+
+        if (summaryCounter === 0){
+            summary.appendChild(noSaved);
+        }
     }
 
     }
