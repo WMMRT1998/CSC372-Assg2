@@ -37,7 +37,7 @@ let summaryCounter = 0; //this is a flag that i will use to check how many event
 
 
 const cards = document.querySelectorAll('.event-card');
-for (const card of cards){
+for (const card of cards) {
 
     /*
         This part of the code was made cause i wanted to get the data from each card in this loop
@@ -48,51 +48,52 @@ for (const card of cards){
         for 1st and 2nd p element, and one for h3 title element, and finally can create a list item with
         all this information combined. That list item can then be added and removed easily. Because this
         is in the for loop, it is created for each event card, so i only have to do code once    
-    */ 
+    */
     const eventDetails = card.querySelectorAll('p');
-    let eventName = card.querySelector('h3').innerText; 
+    let eventName = card.querySelector('h3').innerText;
     let eventDate = eventDetails[0].innerText;
     let eventLocation = eventDetails[1].innerText;
 
     const eventItem = document.createElement('li');
     eventItem.textContent = eventName + ", " + eventDate + ", " + eventLocation;
-    
+
     const button = document.createElement('button');
     button.style.width = '100px';
     button.style.height = '30px';
     button.textContent = 'Save This';
 
-    
-    
+
+
     card.appendChild(button);
     button.addEventListener('click', onClick)
     let flag = 0;
-    function onClick(event){
-        if(flag === 0){
-        const img = event.target.parentElement;
-        img.style.border = "5px solid black" ;
-        button.textContent = 'Remove This';
-        flag = 1
-        summaryCounter++;
-        list1.appendChild(eventItem);
-        summary.removeChild(noSaved); //if something is added, this should always be removed
-
-    }
-
-    else{
-        const img = event.target.parentElement;
-        img.style.border = "none" ;
-        flag = 0
-        button.textContent = 'Save This';
-        summaryCounter--;
-        
-        list1.removeChild(eventItem);
-
-        //This check is to see how many events are saves, if none, it brings back no saved text
-        if (summaryCounter === 0){
-            summary.appendChild(noSaved);
+    function onClick(event) {
+        if (flag === 0) {
+            const img = event.target.parentElement;
+            img.style.border = "5px solid black";
+            button.textContent = 'Remove This';
+            flag = 1
+            summaryCounter++;
+            list1.appendChild(eventItem);
+            //summary.removeChild(noSaved); //if something is added, this should always be removed
+            noSaved.remove(); //kept getting a console error. Not sure if it mattered, but i looked it up
+            //and this was how i fixed it, since original code was removing element that wasn't always there
         }
-    }
+
+        else {
+            const img = event.target.parentElement;
+            img.style.border = "none";
+            flag = 0
+            button.textContent = 'Save This';
+            summaryCounter--;
+
+            list1.removeChild(eventItem);
+
+            //This check is to see how many events are saves, if none, it brings back no saved text
+            if (summaryCounter === 0) {
+                summary.appendChild(noSaved);
+            }
+        }
 
     }
 }
