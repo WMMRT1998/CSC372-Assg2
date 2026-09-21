@@ -23,6 +23,8 @@ for (const card of cards){
     const button = document.createElement('button');
     button.style.width = '100px';
     button.style.height = '30px';
+    button.textContent = 'Save This';
+    
     card.appendChild(button);
     button.addEventListener('click', onClick)
     var flag = 0;
@@ -30,6 +32,7 @@ for (const card of cards){
         if(flag === 0){
         const img = event.target.parentElement;
         img.style.border = "5px solid black" ;
+        button.textContent = 'Remove This';
         flag = 1
     }
 
@@ -37,6 +40,7 @@ for (const card of cards){
         const img = event.target.parentElement;
         img.style.border = "none" ;
         flag = 0
+        button.textContent = 'Save This';
     }
 
     }
