@@ -37,7 +37,8 @@ for (const card of cards){
 
     /*
         This part of the code was made cause i wanted to get the data from each card in this loop
-        but i had never made id's or classes for each part. However, i always used h3 for event name
+        but i had never made id's or classes for each part. In the rules, i am not to alter the html or css at all
+        so I couldn't just add it to the original code. However, i always used h3 for event name
         and 1st p was date/time, and 2nd p was always location.
         So this section creates event details, which stores all the tags, i can then create a variable
         for 1st and 2nd p element, and one for h3 title element, and finally can create a list item with
