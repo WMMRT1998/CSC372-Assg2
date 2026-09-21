@@ -15,6 +15,16 @@ function addBorders(event) {
         flag = 0
     }
 }*/
+const summary = document.createElement('section');
+const list1 = document.createElement('ul');
+const noSaved = document.createElement('p');
+noSaved.textContent = 'There is no events saved'
+
+const page = document.querySelector('body');
+page.appendChild(summary);
+summary.appendChild(noSaved);
+summary.appendChild(list1);
+
 
 
 const cards = document.querySelectorAll('.event-card');
@@ -27,7 +37,7 @@ for (const card of cards){
     
     card.appendChild(button);
     button.addEventListener('click', onClick)
-    var flag = 0;
+    let flag = 0;
     function onClick(event){
         if(flag === 0){
         const img = event.target.parentElement;
