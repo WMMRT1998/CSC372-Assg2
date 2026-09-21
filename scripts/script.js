@@ -1,3 +1,8 @@
+
+
+//This was all test code just for me to check if my function worked on an individual card
+//before adding to for loop
+
 /*const test = document.getElementById('wedding');
 test.addEventListener('click', addBorders);
 var flag = 0;
@@ -46,7 +51,7 @@ for (const card of cards){
         flag = 1
         summaryCounter++;
 
-        summary.removeChild(noSaved);
+        summary.removeChild(noSaved); //if something is added, this should always be removed
 
     }
 
@@ -57,6 +62,7 @@ for (const card of cards){
         button.textContent = 'Save This';
         summaryCounter--;
 
+        //This check is to see how many events are saves, if none, it brings back no saved text
         if (summaryCounter === 0){
             summary.appendChild(noSaved);
         }
