@@ -24,6 +24,11 @@ const summary = document.createElement('section');
 const list1 = document.createElement('ul');
 const noSaved = document.createElement('p');
 const summaryHeader = document.createElement('h2');
+list1.style.display = 'flex';
+list1.style.gap = '1rem';
+list1.style.backgroundColor = 'white';
+
+summary.style.backgroundColor = 'lightgrey';
 
 summaryHeader.textContent = 'Summary of Saved Events'
 noSaved.textContent = 'There is no events saved'
@@ -33,6 +38,8 @@ page.insertBefore(summary, page.querySelector('footer'));
 summary.appendChild(summaryHeader);
 summary.appendChild(noSaved);
 summary.appendChild(list1);
+
+
 let summaryCounter = 0; //this is a flag that i will use to check how many events are saved
 
 
@@ -51,18 +58,17 @@ for (const card of cards) {
     */
     const eventDetails = card.querySelectorAll('p');
     let eventName = card.querySelector('h3').innerText;
-    let eventDate = eventDetails[0].innerText;
+    let eventDate = eventDetails[0].innerHTML;
     let eventLocation = eventDetails[1].innerText;
 
     const eventItem = document.createElement('li');
-    eventItem.textContent = eventName + ", " + eventDate + ", " + eventLocation;
+    eventItem.innerHTML = "<strong>Name: </strong>" + eventName + "<br>" + 
+    "<strong>Date/Time: </strong>" + eventDate + "<br>" + "<strong>Location: </strong>" + eventLocation;
 
     const button = document.createElement('button');
     button.style.width = '100px';
     button.style.height = '30px';
     button.textContent = 'Save This';
-
-
 
     card.appendChild(button);
     button.addEventListener('click', onClick)
