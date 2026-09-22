@@ -32,6 +32,7 @@ const summary = document.createElement('section');
 const list1 = document.createElement('ul');
 const noSaved = document.createElement('p');
 const summaryHeader = document.createElement('h2');
+
 list1.style.display = 'flex';
 list1.style.gap = '1rem';
 list1.style.backgroundColor = 'lightgrey';
@@ -70,6 +71,25 @@ for (const card of cards) {
     let eventName = card.querySelector('h3').innerText;
     let eventDate = eventDetails[0].innerHTML;
     let eventLocation = eventDetails[1].innerText;
+    
+    //Experiment to get my nice boldness back since i can't use inline html
+   /* const nameBold = document.createElement('p');
+    const dateBold = document.createElement('p');
+    const locationBold = document.createElement('p');
+
+    nameBold.textContent = 'Name: ';
+    nameBold.style.fontWeight = 'strong';
+
+    dateBold.textContent = 'Date: ';
+    dateBold.style.fontWeight = 'strong';
+
+    locationBold.textContent = 'Location: ';
+    location.style.fontWeight = 'strong';  */
+    //Experiment didn't work lol. Leaving it here for now to show my thought process
+    //If you know how to, I really wanted to make these parts of the summary bold
+    //but couldn't figure out
+
+ 
 
     const eventItem = document.createElement('li');
     eventItem.style.whiteSpace = 'pre-line';
