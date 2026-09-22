@@ -26,7 +26,9 @@ const noSaved = document.createElement('p');
 const summaryHeader = document.createElement('h2');
 list1.style.display = 'flex';
 list1.style.gap = '1rem';
-list1.style.backgroundColor = 'white';
+list1.style.backgroundColor = 'lightgrey';
+list1.style.listStyleType = 'none';
+
 
 summary.style.backgroundColor = 'lightgrey';
 
@@ -63,12 +65,16 @@ for (const card of cards) {
 
     const eventItem = document.createElement('li');
     eventItem.style.whiteSpace = 'pre-line';
-    eventItem.textContent = "Name: " + eventName + "\n" + eventDate.replace('<br>', '') + "\n" + eventLocation; 
+    eventItem.textContent = "Name: " + eventName + "\n" + eventDate.replace('<br>', '') + eventLocation; 
     /*I originally used innerHTML to make this pretty, but then saw we weren't allowed to. 
     when i replaced with textcontent, it was printing the line break from the html source.
     I could have removed the line break and made them seperate <p>, but i felt that went
     against spirit of assg. So i just replaced '<br>' with '' and maintained the exact source html
     I started with */
+    eventItem.style.backgroundColor = 'white';
+    eventItem.style.margin = '10px';
+    eventItem.style.padding = '10px';
+    
 
     const button = document.createElement('button');
     button.style.width = '100px';
