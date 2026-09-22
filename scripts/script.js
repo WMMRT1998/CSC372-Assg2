@@ -1,5 +1,13 @@
 
+/*
+Name: Russell Webster
+  Date: 09.18.2026
+  CSC 372-01
 
+  This is my javascript file that is connected to index.html. It adds dynamic buttons to each
+  card, along with a dynamic summary section that adds events that have been saved to itself in a brief
+  summarized form
+*/ 
 //This was all test code just for me to check if my function worked on an individual card
 //before adding to for loop
 
