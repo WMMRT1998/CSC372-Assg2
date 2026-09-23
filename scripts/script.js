@@ -155,6 +155,9 @@ for (const card of cards) {
     function mediaQuery(x) {
         if (x.matches) {
             list1.style.flexDirection = 'column';
+
+            //I wanted to add some mor styling to make it look better in mobile view
+            list1.style.marginRight = '40px';
         }
 
         else {
@@ -166,6 +169,6 @@ for (const card of cards) {
     mobileMedia.addEventListener('change', function() {
         mediaQuery(mobileMedia)
     });
-
+    //This fixed the bug. I originally never make the initial call, so this function only ran when display size changed
     mediaQuery(mobileMedia);
 }
