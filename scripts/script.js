@@ -166,4 +166,6 @@ for (const card of cards) {
     mobileMedia.addEventListener('change', function() {
         mediaQuery(mobileMedia)
     });
+
+    mediaQuery(mobileMedia);
 }
