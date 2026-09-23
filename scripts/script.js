@@ -141,4 +141,29 @@ for (const card of cards) {
         }
 
     }
+    
+
+
+    //When looking at my site from a phone, i saw that the flex looked bad. I wanted to change it to vertical when
+    //on mobile. I looked up how to do a media query and added this
+
+    //for consistency with earlier code, i used 600px as max width
+    let mobileMedia = window.matchMedia("(max-width: 600px)")
+    
+
+    //This function checks if it matches, if it is mobile, it changes flex direction to column, otherwise it is default row
+    function mediaQuery(x) {
+        if (x.matches) {
+            list1.style.flexDirection = 'column';
+        }
+
+        else {
+            list1.style.flexDirection = 'row';
+        }
+    }
+
+    //This event listener just calls mediaQuery function whenever size changes, and updates the css
+    mobileMedia.addEventListener('change', function() {
+        mediaQuery(mobileMedia)
+    });
 }
